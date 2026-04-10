@@ -36,3 +36,11 @@ Changelog = "https://github.com/veratum-ai/sdk-python/releases"
 [project.optional-dependencies]
 dev = ["pytest>=7.0", "pytest-cov", "ruff"]
 verify = ["veratum-verify"]
+reports = ["reportlab>=4.0"]
+
+[tool.setuptools.packages.find]
+include = ["veratum*"]
+exclude = ["tests*", "verifier*", "integrations*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "verifier/tests"]
