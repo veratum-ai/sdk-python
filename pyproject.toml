@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "veratum"
+version = "2.3.0"
+description = "Cryptographic evidence infrastructure for AI decisions"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [
+  {name = "Veratum, Inc.", email = "ali.ashkir@veratum.ai"}
+]
+keywords = ["ai", "compliance", "audit", "evidence", "cryptography", "llm"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Security :: Cryptography",
+  "Topic :: Software Development :: Libraries",
+]
+
+[project.urls]
+Homepage = "https://veratum.ai"
+Documentation = "https://docs.veratum.ai"
+Repository = "https://github.com/veratum-ai/sdk-python"
+Issues = "https://github.com/veratum-ai/sdk-python/issues"
+Changelog = "https://github.com/veratum-ai/sdk-python/releases"
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pytest-cov", "ruff"]
+verify = ["veratum-verify"]
