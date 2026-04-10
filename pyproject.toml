@@ -25,6 +25,9 @@ classifiers = [
   "Topic :: Security :: Cryptography",
   "Topic :: Software Development :: Libraries",
 ]
+dependencies = [
+  "requests>=2.28.0",
+]
 
 [project.urls]
 Homepage = "https://veratum.ai"
