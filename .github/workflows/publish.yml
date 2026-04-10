@@ -2,18 +2,17 @@ name: Publish to PyPI
 
 on:
   push:
-    tags:
-      - 'v*'
+    tags: ['v*']
+
+permissions:
+  id-token: write
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     environment: pypi
-    permissions:
-      id-token: write
-
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -21,7 +20,7 @@ jobs:
           python-version: '3.12'
 
       - name: Install build tools
-        run: pip install build twine
+        run: pip install build
 
       - name: Build package
         run: python -m build
